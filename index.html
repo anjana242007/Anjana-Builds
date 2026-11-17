@@ -396,6 +396,216 @@ html.rv-on .rv.in{opacity:1;transform:none}
   .glow i{animation:none}
   .progress{display:none}
 }
+
+/* ========================================================
+   MOBILE & TABLET RESPONSIVENESS ENHANCEMENTS
+   Breakpoints: 360px, 375px, 390px, 430px, 768px, 1024px, 1440px
+   ======================================================== */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 18px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: .08em;
+    padding: 6px 14px;
+    line-height: 1.4;
+    max-width: 100%;
+    text-wrap: balance;
+  }
+  h1 {
+    font-size: clamp(36px, 10vw, 48px);
+    letter-spacing: -.03em;
+  }
+  .role {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+  .lede {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-top: 18px;
+  }
+  .roadmap {
+    width: 100%;
+    max-width: 340px;
+  }
+  .rm-node {
+    width: 100%;
+  }
+  /* Stacking View Tabs on Mobile to prevent overflow */
+  .dash-view-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 18px;
+    padding: 6px;
+    gap: 6px;
+    margin: 22px 0 14px;
+  }
+  .dash-tab {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 13px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --gutter: 16px;
+  }
+  .hero {
+    padding: 96px 0 64px;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14.5px;
+  }
+  .cta {
+    gap: 10px;
+    width: 100%;
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 32px;
+  }
+  .stat {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+  .stat .n {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+  .stat .t {
+    font-size: 12px;
+  }
+  /* Academic background & Certifications cards */
+  .edu {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .edu article {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  .edu h3 {
+    font-size: 18px;
+  }
+  .edu .big {
+    font-size: 30px;
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+  /* Skills collapsible dropdown boxes */
+  .skills-boxes-container {
+    gap: 10px;
+  }
+  .skill-category-box {
+    border-radius: 14px;
+  }
+  .skill-category-summary {
+    padding: 14px 14px;
+  }
+  .skill-cat-left {
+    gap: 10px;
+  }
+  .skill-cat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  .skill-cat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .skill-cat-title {
+    font-size: 15px;
+  }
+  .skill-cat-badge {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+  .skill-category-body {
+    padding: 0 14px 14px;
+  }
+  .skill-pills-wrap {
+    gap: 8px;
+    padding-top: 12px;
+  }
+  .skill-pill {
+    font-size: 12px;
+    padding: 7px 13px;
+  }
+  /* RetailPulse BI Dashboard Mobile */
+  .bi {
+    padding: 16px 12px;
+    border-radius: 18px;
+    margin-top: 16px;
+  }
+  .bi-head b {
+    font-size: 15.5px;
+  }
+  .bi-filters {
+    padding: 10px 10px;
+    gap: 8px 10px;
+  }
+  .bi-kpis {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .bi-kpi {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+  .bi-kpi strong {
+    font-size: 19px;
+  }
+  .bi-card {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+  .hbr {
+    grid-template-columns: minmax(64px, 30%) 1fr auto;
+    gap: 8px;
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  .hbr .v {
+    font-size: 11px;
+  }
+  .proj-grid-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .pg-stat {
+    padding: 10px 12px;
+  }
+  .pg-stat b {
+    font-size: 19px;
+  }
+  /* Contact Cards on small phones */
+  .channels-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .ch-card {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -444,7 +654,7 @@ html.rv-on .rv.in{opacity:1;transform:none}
           <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.84 2.67 4.84 6.14V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4V9.75Z"/></svg>
           LinkedIn
         </a>
-        <a class="btn btn-ghost" href="https://github.com/anjanatanguturi2407-maker" target="_blank" rel="noopener" aria-label="GitHub Profile">
+        <a class="btn btn-ghost" href="https://github.com/anjana242007" target="_blank" rel="noopener" aria-label="GitHub Profile">
           <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
           GitHub
         </a>
@@ -988,13 +1198,13 @@ html.rv-on .rv.in{opacity:1;transform:none}
           </div>
         </a>
 
-        <a class="ch-card" href="https://github.com/anjanatanguturi2407-maker" target="_blank" rel="noopener" aria-label="View GitHub profile">
+        <a class="ch-card" href="https://github.com/anjana242007" target="_blank" rel="noopener" aria-label="View GitHub profile">
           <div class="ch-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
           </div>
           <div class="ch-meta">
             <b>GitHub</b>
-            <span>anjanatanguturi2407-maker</span>
+            <span>anjana242007</span>
           </div>
         </a>
 
